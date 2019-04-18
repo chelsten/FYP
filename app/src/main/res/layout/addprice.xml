@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9"
+    tools:context="com.example.fyp.remotemysqlconnection.ProfitPage">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ADD PRICES ON MARKET"
+                android:textAllCaps="true"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/plantname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toLeftOf="@+id/plantnameET"
+                    android:padding="10dp"
+                    android:text="PLANT TYPE NAME"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="10dp"
+                    android:layout_below="@+id/plantname"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/plantpriceET"
+                    android:id="@+id/gB"
+                    android:text="PLANT PRICE"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/plantnameET"
+                    android:layout_width="@dimen/textwidth"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/jb"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp"
+                    android:background="@android:color/white"
+                    android:hint="NAME"
+                   android:inputType="textPersonName"
+                    android:padding="10dp" />
+
+                <EditText
+                    android:id="@+id/plantpriceET"
+                    android:layout_width="@dimen/textwidth"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/plantname"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp"
+                    android:background="@android:color/white"
+                    android:hint="@string/rm"
+                    android:inputType="number"
+                    android:padding="10dp" />
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/apsubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/buttoncolor"
+                android:text="SUBMIT"
+                android:textColor="#FFF" />
+
+            <Button
+                android:id="@+id/apcancle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/buttoncolor2"
+                android:text="CANCLE"
+                android:textColor="#FFF" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

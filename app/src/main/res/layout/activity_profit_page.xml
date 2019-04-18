@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9"
+    tools:context="com.example.fyp.remotemysqlconnection.ProfitPage">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jualan"
+            android:textAllCaps="true"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:id="@+id/jb"
+                android:text="Jualan Borong"
+                android:textColor="#000"
+                android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:layout_below="@+id/jb"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/jbgredA"
+                android:id="@+id/gA"
+                android:text="Gred A"
+                android:textColor="#000"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:layout_below="@+id/gA"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/jbgredB"
+                android:id="@+id/gB"
+                android:text="Gred B"
+                android:textColor="#000"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:layout_below="@+id/gB"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/jbgredC"
+                android:id="@+id/gC"
+                android:text="Gred C"
+                android:textColor="#000"
+                android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/jbgredA"
+            android:layout_width="@dimen/textwidth"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jb"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+            android:hint="@string/rm"
+            android:inputType="number"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/jbgredB"
+            android:layout_width="@dimen/textwidth"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gA"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+            android:hint="@string/rm"
+            android:inputType="number"
+            android:padding="10dp" />
+
+
+        <EditText
+            android:id="@+id/jbgredC"
+            android:layout_width="@dimen/textwidth"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/gB"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/white"
+            android:hint="@string/rm"
+            android:inputType="number"
+            android:padding="10dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:padding="10dp"
+                android:id="@+id/jl"
+                android:text="Jualan Langsung"
+                android:textColor="#000"
+                android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:layout_below="@+id/jl"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/jlgredA"
+                android:id="@+id/gAjl"
+                android:text="Gred A"
+                android:textColor="#000"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:layout_below="@+id/gAjl"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/jlgredB"
+                android:id="@+id/gBjl"
+                android:text="Gred B"
+                android:textColor="#000"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:layout_below="@+id/gBjl"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/jlgredC"
+                android:id="@+id/gCjl"
+                android:text="Gred C"
+                android:textColor="#000"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/jlgredA"
+                android:layout_width="@dimen/textwidth"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jl"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:background="@android:color/white"
+                android:hint="@string/rm"
+                android:inputType="number"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/jlgredB"
+                android:layout_width="@dimen/textwidth"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gAjl"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:background="@android:color/white"
+                android:hint="@string/rm"
+                android:inputType="number"
+                android:padding="10dp" />
+
+
+            <EditText
+                android:id="@+id/jlgredC"
+                android:layout_width="@dimen/textwidth"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gBjl"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/white"
+                android:hint="@string/rm"
+                android:layout_margin="5dp"
+                android:inputType="number"
+                android:padding="10dp" />
+        </RelativeLayout>
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/buttoncolor"
+        android:text="SUBMIT"
+        android:textColor="#FFF" />
+
+    <Button
+        android:id="@+id/cancle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/buttoncolor2"
+        android:text="CANCLE"
+        android:textColor="#FFF" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
