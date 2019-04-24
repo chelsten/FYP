@@ -68,23 +68,7 @@ public class SessionHandler {
         */
         return currentDate.before(expiryDate);
     }
-
-    public boolean isLoggedInAdmin() {
-        Date currentDate = new Date();
-
-        long millis = mPreferences.getLong(KEY_EXPIRES, 0);
-
-        if (millis == 0) {
-            return false;
-        }
-        Date expiryDate = new Date(millis);
-
-        /* Check if session is expired by comparing
-        current date and Session expiry date
-        */
-        return currentDate.before(expiryDate);
-    }
-
+    
     /**
      * Fetches and returns user details
      *

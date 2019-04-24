@@ -452,7 +452,9 @@
                 android:id="@+id/epsubmit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
                 android:background="@drawable/buttoncolor"
                 android:text="SUBMIT"
                 android:textColor="#FFF" />
@@ -461,7 +463,9 @@
                 android:id="@+id/epcancle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
                 android:background="@drawable/buttoncolor2"
                 android:text="CANCLE"
                 android:textColor="#FFF" />

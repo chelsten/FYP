@@ -74,7 +74,7 @@ public class rv2Adapter extends RecyclerView.Adapter<rv2Adapter.HistoryViewHolde
         return productList.size();
     }
 
-    class HistoryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    class HistoryViewHolder extends RecyclerView.ViewHolder{
         TextView pt;
         TextView tp;
         TextView date;
@@ -90,16 +90,15 @@ public class rv2Adapter extends RecyclerView.Adapter<rv2Adapter.HistoryViewHolde
             market_id = itemView.findViewById(R.id.marketid);
             System.out.println("is is::"+marketid);
 
-            deleteid.setOnClickListener(this);
+            deleteid.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(v == deleteid){
+                            new AddProfitAsyncTask().execute();
+                    }
+                }
+            });
         }
-
-        @Override
-        public void onClick(View v) {
-            if(v == deleteid){
-                new AddProfitAsyncTask().execute();
-            }
-        }
-
 
         private class AddProfitAsyncTask extends AsyncTask<String, String, String> {
             @Override

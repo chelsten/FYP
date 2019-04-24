@@ -82,9 +82,22 @@ public class AskQuestion extends AppCompatActivity {
         profile_pic =findViewById(R.id.profilepicAQ);
         postbutton = findViewById(R.id.farmerButton);
         comment = findViewById(R.id.farmerEditText);
+        Button btn = findViewById(R.id.askbtn);
         //cancleaq = findViewById(R.id.cancleaq);
 
         new FetchProfilePicAsyncTask().execute();
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (CheckNetworkStatus.isNetworkAvailable(getApplicationContext())) {
+                    Intent i = new Intent(AskQuestion.this, MainPage.class);
+                    startActivity(i);
+
+                }
+
+            }
+        });
 
         //getting the recyclerview from xml
         recyclerView = findViewById(R.id.recyclerViewAQ);

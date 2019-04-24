@@ -43,7 +43,7 @@
                     android:layout_margin="5dp"
                     android:layout_toLeftOf="@+id/paEditText"
                     android:padding="10dp"
-                    android:text="Planting Area in Hector"
+                    android:text="Planting Area in Hectare(m²)"
                     android:textColor="#000"
                     android:textSize="18sp" />
 
@@ -81,7 +81,7 @@
                     android:layout_margin="5dp"
                     android:layout_toLeftOf="@+id/ssEditText"
                     android:padding="10dp"
-                    android:text="Seedling spacing(m²):"
+                    android:text="Seedling spacing(m):"
                     android:textColor="#000"
                     android:textSize="18sp" />
 
@@ -96,7 +96,7 @@
                     android:layout_margin="5dp"
                     android:layout_toLeftOf="@+id/rwEditText"
                     android:padding="10dp"
-                    android:text="Row width(m²):"
+                    android:text="Row width(m):"
                     android:textColor="#000"
                     android:textSize="18sp" />
                 <Button
@@ -219,7 +219,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_margin="5dp"
                     android:background="@android:color/white"
-                    android:hint="m²"
+                    android:hint="meter(m)"
                     android:textSize="13dp"
                     android:inputType="numberDecimal"
                     android:padding="10dp" />
@@ -269,7 +269,9 @@
                 android:id="@+id/seCancle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
                 android:background="@drawable/buttoncolor2"
                 android:text="BACK"
                 android:textColor="#FFF" />

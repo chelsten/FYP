@@ -51,11 +51,7 @@ public class SeedlingEstimation extends AppCompatActivity {
         tsTextView = (TextView) findViewById(R.id.tsTextView);
         tsrTextView = (TextView) findViewById(R.id.tsrTextView);
         rtTextview = (TextView) findViewById(R.id.rtTextView);
-        value1 = Float.parseFloat(paEditText.getText() + "");
-        value2 = Float.parseFloat(pa2EditText.getText() + "");
-        value3 = Float.parseFloat(ssEditText.getText() + "");
-        value4 = Float.parseFloat(rwEditText.getText() + "");
-        value5 = Float.parseFloat(nsEditText.getText() + "");
+
 
         seSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,14 +62,20 @@ public class SeedlingEstimation extends AppCompatActivity {
                         !STRING_EMPTY.equals(ssEditText.getText().toString())&&
                         !STRING_EMPTY.equals(rwEditText.getText().toString()) &&
                         !STRING_EMPTY.equals(nsEditText.getText().toString())) {
+                    
+                    value1 = Float.parseFloat(paEditText.getText() + "");
+                    value2 = Float.parseFloat(pa2EditText.getText() + "");
+                    value3 = Float.parseFloat(ssEditText.getText() + "");
+                    value4 = Float.parseFloat(rwEditText.getText() + "");
+                    value5 = Float.parseFloat(nsEditText.getText() + "");
 
                     value6 = ((value1 * value2)*value5)/value3;
-                    value7 = value1/value4;
+                    value7 = (value1*value2)/value4;
                     value8 = value6/value7;
                     value9 = value2 / value8;
                     tsTextView.setText(Math.round(value6)+" Seedlings");
-                    rtTextview.setText(Math.round(value7) + "per row");
-                    tsrTextView.setText(Math.round(value8)+"");
+                    rtTextview.setText(Math.round(value8) + "");
+                    tsrTextView.setText(Math.round(value7)+"per row");
 
                 } else {
                     Toast.makeText(SeedlingEstimation.this,
@@ -88,7 +90,7 @@ public class SeedlingEstimation extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(SeedlingEstimation.this, MainPage.class);
                 startActivity(i);
-                finish();
+
             }
         });
     }

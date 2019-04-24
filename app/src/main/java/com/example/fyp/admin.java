@@ -39,7 +39,7 @@ public class admin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         session = new SessionHandler(getApplicationContext());
 
-        if(session.isLoggedInAdmin()){
+        if(session.isLoggedIn()){
             MainPage();
         }
         setContentView(R.layout.adminpage);
@@ -66,10 +66,9 @@ public class admin extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                session.logoutUser();
                     Intent i = new Intent(admin.this, MainActivity.class);
                     startActivity(i);
-                    finish();
+
 
             }
         });

@@ -68,7 +68,7 @@ public class adminMain extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(adminMain.this, addPrice.class);
                 startActivity(i);
-                finish();
+
             }
         });
 
@@ -77,17 +77,16 @@ public class adminMain extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(adminMain.this, deletePrice.class);
                 startActivity(i);
-                finish();
+
             }
         });
 
         Logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                session.logoutUser();
                 Intent i = new Intent(adminMain.this, MainActivity.class);
                 startActivity(i);
-                finish();
+
 
             }
         });

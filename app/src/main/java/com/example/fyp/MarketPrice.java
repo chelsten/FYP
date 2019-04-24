@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -17,6 +18,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.fyp.Adapter.adapterList;
 import com.example.fyp.Adapter.rvAdapter;
+import com.example.fyp.remotemysqlconnection.helper.CheckNetworkStatus;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -44,12 +46,25 @@ public class MarketPrice extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        Button btn = findViewById(R.id.marketbtn);
         //initializing the productlist
         productList = new ArrayList<>();
         System.out.println("At onCreate Tag1");
         //this method will fetch and parse json
         //to display it in recyclerview
         loadProducts();
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (CheckNetworkStatus.isNetworkAvailable(getApplicationContext())) {
+                    Intent i = new Intent(MarketPrice.this, MainPage.class);
+                    startActivity(i);
+
+                }
+
+            }
+        });
     }
     private void loadProducts() {
 

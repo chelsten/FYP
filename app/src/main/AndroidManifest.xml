@@ -15,25 +15,98 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-        >
-        <activity android:name=".Messaging"></activity>
-        <activity android:name=".AskQuestion" />
-        <activity android:name=".MarketPrice" />
-        <activity android:name=".admin" />
-        <activity android:name=".adminMain" />
-        <activity android:name=".addPrice" />
-        <activity android:name=".deletePrice" />
-        <activity android:name=".editprofile"></activity>
-        <activity android:name=".unitconverter.UnitConverter" />
-        <activity android:name=".SeedlingEstimation" />
-        <activity android:name=".remotemysqlconnection.ExpensesPage" />
-        <activity android:name=".remotemysqlconnection.ProfitPage" />
-        <activity android:name=".DashboardActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".msgList" />
-        <activity android:name=".Message" />
-        <activity android:name=".MainPage" />
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".Messaging">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AskQuestion" />
+        </activity>
+        <activity android:name=".AskQuestion">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainPage" />
+        </activity>
+        <activity android:name=".MarketPrice">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainPage" />
+        </activity>
+        <activity android:name=".admin">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".adminMain">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".admin" />
+        </activity>
+        <activity android:name=".addPrice">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".adminMain" />
+        </activity>
+        <activity android:name=".displayfulldata">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".adminMain" />
+        </activity>
+        <activity android:name=".deletePrice">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".adminMain" />
+        </activity>
+        <activity android:name=".ViewData">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainPage" />
+        </activity>
+        <activity android:name=".editprofile">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainPage" />
+        </activity>
+        <activity android:name=".unitconverter.UnitConverter">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainPage" />
+        </activity>
+        <activity android:name=".SeedlingEstimation">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainPage" />
+        </activity>
+        <activity android:name=".remotemysqlconnection.ExpensesPage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainPage" />
+        </activity>
+        <activity android:name=".remotemysqlconnection.ProfitPage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainPage" />
+        </activity>
+        <activity android:name=".DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainPage" />
+        </activity>
+        <activity android:name=".RegisterActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".msgList">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Message" />
+        </activity>
+        <activity android:name=".Message">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AskQuestion" />
+        </activity>
+        <activity android:name=".MainPage"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

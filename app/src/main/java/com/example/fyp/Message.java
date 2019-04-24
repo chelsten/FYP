@@ -23,6 +23,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.fyp.Adapter.MessageAdapter;
 import com.example.fyp.Adapter.MessageAdapterList;
+import com.example.fyp.remotemysqlconnection.helper.CheckNetworkStatus;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -57,6 +58,7 @@ public class Message extends AppCompatActivity implements View.OnClickListener{
         answerEt = findViewById(R.id.answer);
         submit = findViewById(R.id.submit);
         submit.setOnClickListener(this);
+        Button btn = findViewById(R.id.mssgbtn);
         MessageList = new ArrayList<>();
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -69,6 +71,18 @@ public class Message extends AppCompatActivity implements View.OnClickListener{
 
         loadCase();
         loadMessage();
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (CheckNetworkStatus.isNetworkAvailable(getApplicationContext())) {
+                    Intent i = new Intent(Message.this, MainPage.class);
+                    startActivity(i);
+
+                }
+
+            }
+        });
     }
 
     private void loadCase() {

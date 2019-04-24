@@ -91,12 +91,6 @@ public class editprofile extends AppCompatActivity {
             }
         });
 
-        reset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new ResetAsyncTask().execute();
-            }
-        });
 
         //Launch Login screen when Login Button is clicked
         bck.setOnClickListener(new View.OnClickListener() {
@@ -104,7 +98,7 @@ public class editprofile extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(editprofile.this, MainActivity.class);
                 startActivity(i);
-                finish();
+
             }
         });
 
@@ -139,62 +133,10 @@ public class editprofile extends AppCompatActivity {
     private void MainPage() {
         Intent i = new Intent(getApplicationContext(), MainPage.class);
         startActivity(i);
-        finish();
+
 
     }
 
-    private class ResetAsyncTask extends AsyncTask<String, String, String> {
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            //Display proggress bar
-            pDialog = new ProgressDialog(editprofile.this);
-            pDialog.setMessage("Submitting. Please wait...");
-            pDialog.setIndeterminate(false);
-            pDialog.setCancelable(false);
-            pDialog.show();
-        }
-
-        @Override
-        protected String doInBackground(String... params) {
-            HttpJsonParser httpJsonParser = new HttpJsonParser();
-            Map<String, String> httpParams = new HashMap<>();
-            //Populating request parameters
-            httpParams.put(KEY_USERNAME, username);
-            JSONObject jsonObject = httpJsonParser.makeHttpRequest(
-                    BASE_URL + "reset.php", "POST", httpParams);
-            try {
-                System.out.println("at try");
-                status = jsonObject.getInt(KEY_STATUS);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-        protected void onPostExecute(String result) {
-            pDialog.dismiss();
-            System.out.println("reilst" + result);
-            runOnUiThread(new Runnable() {
-                public void run() {
-                    if (status == 0) {
-
-                        //Display success message
-                        Toast.makeText(editprofile.this,
-                                "Reset Successful..", Toast.LENGTH_LONG).show();
-                        session.loginUser(username,fullName);
-                        MainPage();
-
-                    }
-                    else {
-                        Toast.makeText(editprofile.this,
-                                "Some error occurred..",
-                                Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
-        }
-    }
 
     private void registerUser(){
         new RegisterAsyncTask().execute();
@@ -219,6 +161,7 @@ public class editprofile extends AppCompatActivity {
             Map<String, String> httpParams = new HashMap<>();
             //Populating request parameters
             encodedImage = convertImage(image);
+            httpParams.put(KEY_USERNAME, username);
             httpParams.put(KEY_PROFILE_IMAGE,encodedImage);
             httpParams.put(KEY_PASSWORD, password);
             httpParams.put(KEY_FULL_NAME, fullName);
@@ -243,10 +186,9 @@ public class editprofile extends AppCompatActivity {
 
                         //Display success message
                         Toast.makeText(editprofile.this,
-                                "Register Successful..", Toast.LENGTH_LONG).show();
+                                "edit profile Successful..", Toast.LENGTH_LONG).show();
                         session.loginUser(username,fullName);
                         MainPage();
-
                     }
                     else {
                         Toast.makeText(editprofile.this,

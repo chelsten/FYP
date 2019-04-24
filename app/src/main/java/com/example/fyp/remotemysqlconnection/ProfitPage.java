@@ -79,7 +79,7 @@ public class ProfitPage extends AppCompatActivity {
                 if (CheckNetworkStatus.isNetworkAvailable(getApplicationContext())) {
                     Intent i = new Intent(ProfitPage.this, MainPage.class);
                     startActivity(i);
-                    finish();
+
                 }
 
             }
@@ -181,7 +181,6 @@ public class ProfitPage extends AppCompatActivity {
                                 "Profit Added", Toast.LENGTH_LONG).show();
                         Intent i = new Intent(ProfitPage.this, MainPage.class);
                         startActivity(i);
-                        finish();
 
                     } else {
                         Toast.makeText(ProfitPage.this,

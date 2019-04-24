@@ -63,7 +63,6 @@ public class addPrice extends AppCompatActivity {
                 if (CheckNetworkStatus.isNetworkAvailable(getApplicationContext())) {
                     Intent i = new Intent(addPrice.this, adminMain.class);
                     startActivity(i);
-                    finish();
                 }
 
             }
@@ -152,7 +151,6 @@ public class addPrice extends AppCompatActivity {
                                 "Plant market price added..", Toast.LENGTH_LONG).show();
                         Intent i = new Intent(addPrice.this, adminMain.class);
                         startActivity(i);
-                        finish();
 
                     } else {
                         Toast.makeText(addPrice.this,

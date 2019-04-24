@@ -91,7 +91,6 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(RegisterActivity.this, MainActivity.class);
                 startActivity(i);
-                finish();
             }
         });
 
@@ -103,11 +102,13 @@ public class RegisterActivity extends AppCompatActivity {
                         !STRING_EMPTY.equals(etConfirmPassword.getText().toString())&&
                         !STRING_EMPTY.equals(etFullName.getText().toString()) &&
                         profileImage.getDrawable() != null) {
-                    username = etUsername.getText().toString().toLowerCase().trim();
-                    password = etPassword.getText().toString().trim();
-                    confirmPassword = etConfirmPassword.getText().toString().trim();
-                    fullName = etFullName.getText().toString().trim();
-                    registerUser();
+                        username = etUsername.getText().toString().toLowerCase().trim();
+                        password = etPassword.getText().toString().trim();
+                        confirmPassword = etConfirmPassword.getText().toString().trim();
+                        fullName = etFullName.getText().toString().trim();
+                    if(validateInputs()) {
+                        registerUser();
+                    }
 
 
                 } else {
@@ -126,7 +127,6 @@ public class RegisterActivity extends AppCompatActivity {
     private void MainPage() {
         Intent i = new Intent(getApplicationContext(), MainPage.class);
         startActivity(i);
-        finish();
 
     }
 

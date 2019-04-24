@@ -120,7 +120,6 @@ public class ExpensesPage extends AppCompatActivity {
                 if (CheckNetworkStatus.isNetworkAvailable(getApplicationContext())) {
                     Intent i = new Intent(ExpensesPage.this, MainPage.class);
                     startActivity(i);
-                    finish();
                 }
 
             }
@@ -251,7 +250,6 @@ public class ExpensesPage extends AppCompatActivity {
                                 "Profit Added", Toast.LENGTH_LONG).show();
                         Intent i = new Intent(ExpensesPage.this, MainPage.class);
                         startActivity(i);
-                        finish();
 
                     } else {
                         Toast.makeText(ExpensesPage.this,
