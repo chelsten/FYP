@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -54,6 +55,9 @@ public class MainPage extends AppCompatActivity {
     private String jumlahPendapatantemp;
     private String jumlahPerbelanjaantemp;
     private String netProfittemp;
+    private LinearLayout ll4;
+    private LinearLayout ll5;
+    private LinearLayout ll6;
     private String pp1 = "";
     private TextView profit;
     private int success;
@@ -93,12 +97,40 @@ public class MainPage extends AppCompatActivity {
         expenses = findViewById(R.id.expenses);
         netprofit = findViewById(R.id.netProfit);
         profile_pic = findViewById(R.id.profilepic);
+        ll4 = findViewById(R.id.ll4);
+        ll5 = findViewById(R.id.ll5);
+        ll6 = findViewById(R.id.ll6);
 
         new FetchProfilePicAsyncTask().execute();
 
         jumlahPendapatantemp = profit.getText().toString();
         jumlahPerbelanjaantemp = expenses.getText().toString();
         netProfittemp = netprofit.getText().toString();
+
+        ll4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainPage.this, ProfitPage.class);
+                startActivity(i);
+            }
+        });
+
+        ll5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainPage.this, ExpensesPage.class);
+                startActivity(i);
+            }
+        });
+
+        ll6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainPage.this, displaycurrentdata.class);
+                startActivity(i);
+            }
+        });
+
 
         resetE.setOnClickListener(new View.OnClickListener() {
             @Override

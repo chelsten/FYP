@@ -51,6 +51,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".adminMain" />
         </activity>
+        <activity android:name=".displaycurrentdata">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".adminMain" />
+        </activity>
         <activity android:name=".deletePrice">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
