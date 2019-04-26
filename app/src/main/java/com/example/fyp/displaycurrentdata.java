@@ -110,7 +110,7 @@ public class displaycurrentdata extends AppCompatActivity {
     private String usernametemp;
     private String id;
     private String n1, n2;
-    private static final String BASE_URL = "https://farmaid.000webhostapp.com/member/db/fetch_currentsavedata.php";
+    private static final String BASE_URL = "https://farmaid1.000webhostapp.com/member/db/fetch_currentsavedata.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

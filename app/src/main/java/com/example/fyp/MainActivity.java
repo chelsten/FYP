@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private String password;
     private String user_id;
     private ProgressDialog pDialog;
-    private String login_url = "https://farmaid.000webhostapp.com/member/db/login.php";
+    private String login_url = "https://farmaid1.000webhostapp.com/member/db/login.php";
     private SessionHandler session;
 
     @Override

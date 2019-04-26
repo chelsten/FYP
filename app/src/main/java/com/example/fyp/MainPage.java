@@ -67,7 +67,7 @@ public class MainPage extends AppCompatActivity {
     private String usernametemp;
     private int status;
     private String n1, n2;
-    private static final String BASE_URL = "https://farmaid.000webhostapp.com/member/db/";
+    private static final String BASE_URL = "https://farmaid1.000webhostapp.com/member/db/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

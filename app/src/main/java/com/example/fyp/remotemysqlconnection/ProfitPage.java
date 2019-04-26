@@ -34,7 +34,7 @@ public class ProfitPage extends AppCompatActivity {
     private static final String KEY_JLGB = "etjlgredB";
     private static final String KEY_JLGC = "etjlgredC";
     private static String STRING_EMPTY = "";
-    private static final String BASE_URL = "https://farmaid.000webhostapp.com/member/db/";
+    private static final String BASE_URL = "https://farmaid1.000webhostapp.com/member/db/";
     private SessionHandler session;
     private EditText jlgredAEditText;
     private EditText jlgredBEditText;

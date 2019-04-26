@@ -42,7 +42,7 @@ import java.util.Map;
 public class AskQuestion extends AppCompatActivity {
     //this is the JSON Data URL
     //make sure you are using the correct ip else it will not work
-    private static final String URL_PRODUCTS = "https://farmaid.000webhostapp.com/member/db/fetch_comment.php";
+    private static final String URL_PRODUCTS = "https://farmaid1.000webhostapp.com/member/db/fetch_comment.php";
     // private RecyclerView rv;
     //a list to store all the products
     List<commentAdapterList> commentList;
@@ -67,7 +67,7 @@ public class AskQuestion extends AppCompatActivity {
     private  String usernametemp;
     private ArrayList<HashMap<String, String>> movieList;
     private int status;
-    private static final String BASE_URL = "https://farmaid.000webhostapp.com/member/db/";
+    private static final String BASE_URL = "https://farmaid1.000webhostapp.com/member/db/";
 
     //the recyclerview
     RecyclerView recyclerView;

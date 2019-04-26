@@ -29,7 +29,7 @@ public class addPrice extends AppCompatActivity {
     private static final String KEY_PLANT_NAME = "plantname";
     private static final String KEY_PLANT_PRICE = "plantprice";
     private static String STRING_EMPTY = "";
-    private static final String BASE_URL = "https://farmaid.000webhostapp.com/member/db/";
+    private static final String BASE_URL = "https://farmaid1.000webhostapp.com/member/db/";
     private SessionHandler session;
     private EditText plantname;
     private EditText plantprice;

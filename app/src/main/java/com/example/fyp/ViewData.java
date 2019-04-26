@@ -37,7 +37,7 @@ import java.util.Map;
 public class ViewData extends AppCompatActivity {
     //this is the JSON Data URL
     //make sure you are using the correct ip else it will not work
-    private static final String URL_PRODUCTS = "https://farmaid.000webhostapp.com/member/db/fetch_savedata.php?userid=";
+    private static final String URL_PRODUCTS = "https://farmaid1.000webhostapp.com/member/db/fetch_savedata.php?userid=";
     // private RecyclerView rv;
     //a list to store all the products
     List<adapter3List> productList;
@@ -48,7 +48,7 @@ public class ViewData extends AppCompatActivity {
     private static final String KEY_USERNAME = "username";
     private static final String KEY_DATA1 = "data1";
     private static final String KEY_SUCCESS = "success";
-    private static final String BASE_URL = "https://farmaid.000webhostapp.com/member/db/";
+    private static final String BASE_URL = "https://farmaid1.000webhostapp.com/member/db/";
     private int id;
     private static final String KEY_userid = "userid";
 

@@ -45,7 +45,7 @@ public class Message extends AppCompatActivity implements View.OnClickListener{
     String email;
     MainActivity activity;
     private SessionHandler session;
-    final private String UPLOAD_URL = "https://farmaid.000webhostapp.com/member/db/answerMessage.php";
+    final private String UPLOAD_URL = "https://farmaid1.000webhostapp.com/member/db/answerMessage.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,7 +94,7 @@ public class Message extends AppCompatActivity implements View.OnClickListener{
          * Then we have a Response Listener and a Error Listener
          * In response listener we will get the JSON response as a String
          * */
-        String URL_PRODUCTS = "https://farmaid.000webhostapp.com/member/db/message.php?tag=detail&id=" + id;
+        String URL_PRODUCTS = "https://farmaid1.000webhostapp.com/member/db/message.php?tag=detail&id=" + id;
         StringRequest jsonObjectRequest = new StringRequest(Request.Method.GET, URL_PRODUCTS,
                 new Response.Listener<String>() {
                     @Override
@@ -137,7 +137,7 @@ public class Message extends AppCompatActivity implements View.OnClickListener{
          * Then we have a Response Listener and a Error Listener
          * In response listener we will get the JSON response as a String
          * */
-        String URL_PRODUCTS = "https://farmaid.000webhostapp.com/member/db/message.php?tag=msg&id=" + id;
+        String URL_PRODUCTS = "https://farmaid1.000webhostapp.com/member/db/message.php?tag=msg&id=" + id;
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_PRODUCTS,
                 new Response.Listener<String>() {
                     @Override

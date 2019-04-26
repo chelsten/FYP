@@ -54,7 +54,7 @@ public class editprofile extends AppCompatActivity {
     private String fullName;
     private String encodedImage = "";
     private ProgressDialog pDialog;
-    private String BASE_URL = "https://farmaid.000webhostapp.com/member/db/";
+    private String BASE_URL = "https://farmaid1.000webhostapp.com/member/db/";
     private SessionHandler session;
     private int status;
 

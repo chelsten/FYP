@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:id="@+id/rl1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <android.support.v7.widget.CardView
@@ -32,7 +32,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/cv3"
-            android:layout_width="300dp"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_margin="10dp"

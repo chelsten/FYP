@@ -45,7 +45,7 @@ public class ExpensesPage extends AppCompatActivity {
     private static final String KEY_ETLLK = "etllk";
     private static final String KEY_EMPTY = "";
     private static String STRING_EMPTY = "";
-    private static final String BASE_URL = "https://farmaid.000webhostapp.com/member/db/";
+    private static final String BASE_URL = "https://farmaid1.000webhostapp.com/member/db/";
     private SessionHandler session;
     private EditText meEditText;
     private EditText swwEditText;
@@ -247,7 +247,7 @@ public class ExpensesPage extends AppCompatActivity {
                     if (success == 1) {
                         //Display success message
                         Toast.makeText(ExpensesPage.this,
-                                "Profit Added", Toast.LENGTH_LONG).show();
+                                "Expenses Added", Toast.LENGTH_LONG).show();
                         Intent i = new Intent(ExpensesPage.this, MainPage.class);
                         startActivity(i);
 

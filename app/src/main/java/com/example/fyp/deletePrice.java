@@ -29,7 +29,7 @@ import java.util.List;
 public class deletePrice extends AppCompatActivity {
     //this is the JSON Data URL
     //make sure you are using the correct ip else it will not work
-    private static final String URL_PRODUCTS = "https://farmaid.000webhostapp.com/member/db/fetch_market.php";
+    private static final String URL_PRODUCTS = "https://farmaid1.000webhostapp.com/member/db/fetch_market.php";
     // private RecyclerView rv;
     //a list to store all the products
     List<adapter2List> productList;
