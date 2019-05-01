@@ -700,17 +700,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/marketbtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/n4"
-            android:layout_gravity="center"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="100dp"
-            android:background="@drawable/buttoncolor2"
-            android:text="BACK" />
     </LinearLayout>
 </LinearLayout>
 

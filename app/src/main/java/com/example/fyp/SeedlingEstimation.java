@@ -70,12 +70,12 @@ public class SeedlingEstimation extends AppCompatActivity {
                     value5 = Float.parseFloat(nsEditText.getText() + "");
 
                     value6 = ((value1 * value2)*value5)/value3;
-                    value7 = (value1*value2)/value4;
+                    value7 = value1/value4;
                     value8 = value6/value7;
                     value9 = value2 / value8;
                     tsTextView.setText(Math.round(value6)+" Seedlings");
-                    rtTextview.setText(Math.round(value8) + "");
-                    tsrTextView.setText(Math.round(value7)+"per row");
+                    rtTextview.setText(Math.round(value7));
+                    tsrTextView.setText(Math.round(value8) + " per row");
 
                 } else {
                     Toast.makeText(SeedlingEstimation.this,
